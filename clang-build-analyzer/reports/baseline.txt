@@ -1,0 +1,203 @@
+Analyzing build trace from '/workspace/results/reproducible-20261026T213416Z/baseline/run-2/trace.bin'...
+**** Time summary:
+Compilation (12 times):
+  Parsing (frontend):           41.7 s
+  Codegen & opts (backend):      8.6 s
+
+**** Files that took longest to parse (compiler frontend):
+  7287 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service.dir/src/main.cpp.o
+  5543 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello_service.usrv.pb.cpp.o
+  5359 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello_client.usrv.pb.cpp.o
+  4209 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_postgres.cpp.o
+  3873 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_grpc.cpp.o
+  3382 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello.grpc.pb.cc.o
+  2767 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_mongo.cpp.o
+  2298 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello.cpp.o
+  2296 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_unittest.dir/src/greeting_test.cpp.o
+  1858 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello.pb.cc.o
+
+**** Files that took longest to codegen (compiler backend):
+  2539 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello_client.usrv.pb.cpp.o
+  2235 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello_service.usrv.pb.cpp.o
+  1532 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello.grpc.pb.cc.o
+   708 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service.dir/src/main.cpp.o
+   459 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_postgres.cpp.o
+   303 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_grpc.cpp.o
+   282 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_unittest.dir/src/greeting_test.cpp.o
+   207 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_proto.dir/proto/handlers/hello.pb.cc.o
+   145 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello_mongo.cpp.o
+    64 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/CMakeFiles/benchmark_service_objs.dir/src/hello.cpp.o
+
+**** Templates that took longest to instantiate:
+   350 ms: userver::components::ComponentList::Append<userver::server::handlers... (3 times, avg 116 ms)
+   282 ms: std::reverse_iterator<std::_Bit_iterator> (11 times, avg 25 ms)
+   240 ms: userver::ugrpc::server::impl::MakeServiceWorker<handlers::api::Hello... (1 times, avg 240 ms)
+   239 ms: std::reverse_iterator<std::_Bit_const_iterator> (11 times, avg 21 ms)
+   220 ms: std::variant<std::basic_string<char>, int, bool, long, long long, un... (7 times, avg 31 ms)
+   218 ms: std::make_unique<userver::ugrpc::server::impl::ServiceWorkerImpl<han... (1 times, avg 218 ms)
+   215 ms: userver::ugrpc::server::impl::ServiceWorkerImpl<handlers::api::Hello... (1 times, avg 215 ms)
+   186 ms: userver::utils::Box<userver::ugrpc::client::impl::ClientData>::Box<u... (1 times, avg 186 ms)
+   185 ms: std::make_unique<userver::ugrpc::client::impl::ClientData, userver::... (1 times, avg 185 ms)
+   183 ms: userver::ugrpc::client::impl::ClientData::ClientData<handlers::api::... (1 times, avg 183 ms)
+   178 ms: grpc::internal::CallbackBidiHandler<grpc::ByteBuffer, grpc::ByteBuff... (3 times, avg 59 ms)
+   176 ms: grpc::internal::CallbackBidiHandler<grpc::ByteBuffer, grpc::ByteBuff... (3 times, avg 58 ms)
+   171 ms: std::unordered_map<int, int> (11 times, avg 15 ms)
+   167 ms: userver::components::ComponentList::Append<benchmark_service::HelloG... (3 times, avg 55 ms)
+   161 ms: std::__detail::__variant::_Variant_base<std::basic_string<char>, int... (7 times, avg 23 ms)
+   147 ms: userver::storages::postgres::io::ReadBuffer<long &> (2 times, avg 73 ms)
+   146 ms: userver::storages::postgres::io::detail::IntegralBinaryParser<long>:... (2 times, avg 73 ms)
+   145 ms: std::_Hashtable<int, std::pair<const int, int>, std::allocator<std::... (11 times, avg 13 ms)
+   132 ms: userver::components::ComponentList::Append<userver::server::handlers... (3 times, avg 44 ms)
+   131 ms: fmt::detail::format_string_checker<char, fmt::detail::error_handler,... (5 times, avg 26 ms)
+   131 ms: userver::components::ComponentList::Append<benchmark_service::HelloM... (3 times, avg 43 ms)
+   130 ms: userver::components::ComponentList::Append<benchmark_service::HelloP... (3 times, avg 43 ms)
+   129 ms: userver::components::ComponentList::Append<userver::congestion_contr... (3 times, avg 43 ms)
+   129 ms: fmt::detail::parse_format_specs<int, fmt::detail::compile_parse_cont... (5 times, avg 25 ms)
+   128 ms: userver::components::ComponentList::Append<userver::clients::dns::Co... (3 times, avg 42 ms)
+   128 ms: userver::components::ComponentList::Append<userver::components::Test... (3 times, avg 42 ms)
+   127 ms: userver::components::ComponentList::Append<benchmark_service::Hello> (3 times, avg 42 ms)
+   127 ms: userver::ugrpc::server::impl::SetupCallbacks<handlers::api::HelloSer... (1 times, avg 127 ms)
+   126 ms: userver::ugrpc::server::impl::SetupCallback<handlers::api::HelloServ... (1 times, avg 126 ms)
+   122 ms: fmt::basic_format_string<char, int>::basic_format_string<char[29], 0> (4 times, avg 30 ms)
+
+**** Template sets that took longest to instantiate:
+  2323 ms: std::unique_ptr<$> (177 times, avg 13 ms)
+  1889 ms: std::__uniq_ptr_data<$> (177 times, avg 10 ms)
+  1869 ms: std::__uniq_ptr_impl<$> (177 times, avg 10 ms)
+  1619 ms: std::__and_<$> (1505 times, avg 1 ms)
+  1034 ms: std::tuple<$> (201 times, avg 5 ms)
+  1014 ms: std::_Hashtable<$> (114 times, avg 8 ms)
+   962 ms: std::optional<$> (138 times, avg 6 ms)
+   947 ms: std::unordered_map<$> (77 times, avg 12 ms)
+   844 ms: std::__or_<$> (1272 times, avg 0 ms)
+   815 ms: std::reverse_iterator<$> (38 times, avg 21 ms)
+   807 ms: std::make_unique<$> (15 times, avg 53 ms)
+   605 ms: std::_TupleConstraints<$>::__is_implicitly_constructible<$> (409 times, avg 1 ms)
+   586 ms: std::variant<$> (30 times, avg 19 ms)
+   564 ms: userver::components::ComponentList::Append<$> (11 times, avg 51 ms)
+   532 ms: fmt::basic_format_string<$>::basic_format_string<$> (57 times, avg 9 ms)
+   518 ms: std::is_trivially_destructible<$> (290 times, avg 1 ms)
+   434 ms: std::__detail::__variant::_Variant_base<$> (30 times, avg 14 ms)
+   397 ms: std::pair<$> (181 times, avg 2 ms)
+   394 ms: std::__do_visit<$> (24 times, avg 16 ms)
+   375 ms: std::common_reference<$> (415 times, avg 0 ms)
+   366 ms: std::__detail::_Insert<$> (93 times, avg 3 ms)
+   362 ms: fmt::detail::format_string_checker<$>::format_string_checker (25 times, avg 14 ms)
+   355 ms: std::__detail::__variant::__gen_vtable_impl<$>::_S_apply (24 times, avg 14 ms)
+   351 ms: fmt::detail::parse_format_specs<$> (26 times, avg 13 ms)
+   350 ms: std::_Optional_base<$> (138 times, avg 2 ms)
+   347 ms: std::__detail::__variant::__gen_vtable_impl<$>::_S_apply_all_alts<$> (24 times, avg 14 ms)
+   347 ms: std::copy<$> (120 times, avg 2 ms)
+   344 ms: std::__detail::_Insert_base<$> (90 times, avg 3 ms)
+   337 ms: std::__detail::__variant::__gen_vtable_impl<$>::_S_apply_single_alt<$> (73 times, avg 4 ms)
+   335 ms: std::_Tuple_impl<$> (201 times, avg 1 ms)
+
+**** Functions that took longest to compile:
+    39 ms: userver::v3_3_rc::ugrpc::client::impl::UnaryCall<handlers::api::Hell... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    23 ms: grpc::internal::CallOpClientRecvStatus::FinishOp(bool*) (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    23 ms: void userver::v3_3_rc::ugrpc::client::impl::ClientData::OnConfigUpda... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    22 ms: grpc::internal::CallOpClientRecvStatus::FinishOp(bool*) (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    22 ms: SayHelloTo_Basic_Utest::EnrichedTest::TestBody() (/workspace/benchmark_service/src/greeting_test.cpp)
+    20 ms: grpc::Status grpc::GenericDeserialize<grpc::ProtoBufferReader, handl... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    20 ms: grpc::Status grpc::GenericDeserialize<grpc::ProtoBufferReader, handl... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    20 ms: grpc::Status grpc::GenericDeserialize<grpc::ProtoBufferReader, googl... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    17 ms: userver::v3_3_rc::ugrpc::client::impl::UnaryCall<handlers::api::Hell... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    17 ms: userver::v3_3_rc::ugrpc::server::impl::CallProcessor<userver::v3_3_r... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    17 ms: userver::v3_3_rc::ugrpc::server::impl::CallProcessor<userver::v3_3_r... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    16 ms: grpc::internal::BlockingUnaryCallImpl<google::protobuf::MessageLite,... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    16 ms: benchmark_service::HelloMongo::HandleRequestThrow[abi:cxx11](userver... (/workspace/benchmark_service/src/hello_mongo.cpp)
+    15 ms: userver::v3_3_rc::storages::postgres::ResultSet userver::v3_3_rc::st... (/workspace/benchmark_service/src/hello_postgres.cpp)
+    14 ms: void std::vector<std::unique_ptr<grpc::experimental::Interceptor, st... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    13 ms: grpc::internal::InterceptorBatchMethodsImpl::ModifySendStatus(grpc::... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    12 ms: grpc::internal::CallOpServerSendStatus::ServerSendStatus(std::multim... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    12 ms: grpc::internal::CallbackUnaryCallImpl<google::protobuf::MessageLite,... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    12 ms: grpc::internal::CallOpServerSendStatus::ServerSendStatus(std::multim... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    12 ms: userver::v3_3_rc::storages::Query::Query(char const*, std::optional<... (/workspace/benchmark_service/src/hello_postgres.cpp)
+    12 ms: userver::v3_3_rc::middlewares::RunnerComponentBase<userver::v3_3_rc:... (/workspace/benchmark_service/src/hello_grpc.cpp)
+    11 ms: grpc::internal::InterceptorBatchMethodsImpl::ModifySendStatus(grpc::... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    11 ms: userver::v3_3_rc::yaml_config::Schema::~Schema() (/workspace/benchmark_service/src/hello_grpc.cpp)
+    11 ms: grpc::internal::InterceptorBatchMethodsImpl::ModifySendStatus(grpc::... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    11 ms: __cxx_global_var_init.14 (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    11 ms: grpc::internal::MetadataMap::GetBinaryErrorDetails[abi:cxx11]() (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.cpp)
+    11 ms: grpc::internal::CallbackUnaryHandler<grpc::ByteBuffer, grpc::ByteBuf... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+    11 ms: grpc::internal::ClientCallbackUnaryImpl::ClientCallbackUnaryImpl<goo... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    10 ms: grpc::internal::MetadataMap::GetBinaryErrorDetails[abi:cxx11]() (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.grpc.pb.cc)
+    10 ms: grpc::Status grpc::GenericSerialize<grpc::ProtoBufferWriter, handler... (/workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.cpp)
+
+**** Function sets that took longest to compile / optimize:
+    61 ms: grpc::Status grpc::GenericDeserialize<$>(grpc::ByteBuffer*, google::... (3 times, avg 20 ms)
+    42 ms: grpc::internal::CallOpSet<$>::~CallOpSet() (10 times, avg 4 ms)
+    41 ms: grpc::internal::CallOpSet<$>::FinalizeResult(void**, bool*) (10 times, avg 4 ms)
+    39 ms: userver::v3_3_rc::components::ComponentList& userver::v3_3_rc::compo... (11 times, avg 3 ms)
+    39 ms: userver::v3_3_rc::ugrpc::client::impl::UnaryCall<$>::InterceptCall() (1 times, avg 39 ms)
+    38 ms: grpc::internal::CallOpSet<$>::ContinueFillOpsAfterInterception() (10 times, avg 3 ms)
+    37 ms: grpc::internal::CallOpSet<$>::FillOps(grpc::internal::Call*) (10 times, avg 3 ms)
+    35 ms: userver::v3_3_rc::ugrpc::server::impl::CallProcessor<$>::ProcessCall() (2 times, avg 17 ms)
+    31 ms: grpc::Status grpc::GenericSerialize<$>(google::protobuf::MessageLite... (3 times, avg 10 ms)
+    29 ms: std::_MakeUniq<$>::__single_object std::make_unique<$>(std::__cxx11:... (11 times, avg 2 ms)
+    24 ms: grpc::internal::CallOpServerSendStatus::ServerSendStatus(std::multim... (2 times, avg 12 ms)
+    23 ms: void userver::v3_3_rc::ugrpc::client::impl::ClientData::OnConfigUpda... (1 times, avg 23 ms)
+    22 ms: void userver::v3_3_rc::components::impl::TryValidateStaticConfig<$>(... (10 times, avg 2 ms)
+    21 ms: std::_Function_handler<$>::_M_manager(std::_Any_data&, std::_Any_dat... (17 times, avg 1 ms)
+    20 ms: userver::v3_3_rc::utils::impl::WrappedCallImpl<$>::~WrappedCallImpl() (4 times, avg 5 ms)
+    19 ms: grpc::Status::Status(grpc::StatusCode, std::__cxx11::basic_string<$>... (3 times, avg 6 ms)
+    17 ms: userver::v3_3_rc::ugrpc::client::impl::UnaryCall<$>::PerformAttempt() (1 times, avg 17 ms)
+    17 ms: std::_Rb_tree_iterator<$> std::_Rb_tree<$>::_M_emplace_equal<$>(std:... (3 times, avg 5 ms)
+    16 ms: void std::_Hashtable<$>::_M_assign<$>(std::_Hashtable<$> const&, std... (2 times, avg 8 ms)
+    16 ms: grpc::internal::BlockingUnaryCallImpl<$>::BlockingUnaryCallImpl(grpc... (1 times, avg 16 ms)
+    15 ms: userver::v3_3_rc::storages::postgres::ResultSet userver::v3_3_rc::st... (1 times, avg 15 ms)
+    14 ms: userver::v3_3_rc::utils::impl::WrappedCallImpl<$>::Perform() (4 times, avg 3 ms)
+    14 ms: userver::v3_3_rc::utils::FastScopeGuard<$>::~FastScopeGuard() (6 times, avg 2 ms)
+    14 ms: void std::vector<$>::_M_realloc_insert<$>(__gnu_cxx::__normal_iterat... (1 times, avg 14 ms)
+    14 ms: void userver::v3_3_rc::ugrpc::server::impl::CallProcessor<$>::RunWit... (2 times, avg 7 ms)
+    13 ms: std::__cxx11::basic_string<$>::_M_replace(unsigned long, unsigned lo... (2 times, avg 6 ms)
+    13 ms: grpc::internal::FillMetadataArray(std::multimap<$> const&, unsigned ... (3 times, avg 4 ms)
+    12 ms: std::_Optional_payload_base<$>::_M_move_assign(std::_Optional_payloa... (4 times, avg 3 ms)
+    12 ms: userver::v3_3_rc::ugrpc::server::impl::CallProcessor<$>::RunOnCallFi... (2 times, avg 6 ms)
+    12 ms: grpc::internal::CallOpSet<$>::ContinueFinalizeResultAfterInterceptio... (10 times, avg 1 ms)
+
+**** Expensive headers:
+6870 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_service.usrv.pb.hpp (included 3 times, avg 2290 ms), included via:
+  2x: hello_grpc.hpp 
+  1x: <direct include>
+
+4824 ms: /workspace/benchmark_service/src/hello_grpc.hpp (included 2 times, avg 2412 ms), included via:
+  2x: <direct include>
+
+4785 ms: /workspace/benchmark_service/src/hello_postgres.hpp (included 2 times, avg 2392 ms), included via:
+  2x: <direct include>
+
+4112 ms: /usr/include/userver/components/component.hpp (included 4 times, avg 1028 ms), included via:
+  1x: hello_grpc.hpp 
+  1x: hello_mongo.hpp 
+  1x: hello_postgres.hpp 
+  1x: <direct include>
+
+3529 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello_client.usrv.pb.hpp (included 1 times, avg 3529 ms), included via:
+  1x: <direct include>
+
+3421 ms: /workspace/benchmark_service/build-repro-20261026T213416Z-none-2/proto/handlers/hello.pb.h (included 6 times, avg 570 ms), included via:
+  2x: <direct include>
+  2x: hello_grpc.hpp hello_service.usrv.pb.hpp 
+  1x: hello_client.usrv.pb.hpp 
+  1x: hello_service.usrv.pb.hpp 
+
+2816 ms: /usr/include/fmt/format.h (included 10 times, avg 281 ms), included via:
+  1x: <direct include>
+  1x: component.hpp resolver.hpp common.hpp sockaddr.hpp 
+  1x: hello_mongo.hpp component.hpp component_config.hpp yaml_config.hpp common.hpp 
+  1x: hello_grpc.hpp component.hpp component_config.hpp yaml_config.hpp common.hpp 
+  1x: hello_postgres.hpp component.hpp component_config.hpp yaml_config.hpp common.hpp 
+  1x: hello.hpp http_handler_base.hpp token_bucket.hpp rate_counter.hpp rate.hpp 
+  ...
+
+2472 ms: /workspace/benchmark_service/src/hello_mongo.hpp (included 2 times, avg 1236 ms), included via:
+  2x: <direct include>
+
+2137 ms: /workspace/benchmark_service/src/hello.hpp (included 1 times, avg 2137 ms), included via:
+  1x: <direct include>
+
+1764 ms: /usr/include/userver/clients/dns/component.hpp (included 1 times, avg 1764 ms), included via:
+  1x: <direct include>
+
+  done in 0.0s.

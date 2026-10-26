@@ -1,0 +1,16 @@
+# Local checkout of Clang Build Analyzer
+/ClangBuildAnalyzer-src/
+
+# Intermediate and historical measurements
+/results/
+
+# Generated build files
+/benchmark_service/build*/
+/benchmark_service/third_party/
+/benchmark_service/compile_commands.json
+/benchmark_service/-.json
+
+# Local system files
+.DS_Store
+*.core
+/-[.]json
